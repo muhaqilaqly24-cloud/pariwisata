@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VisitLondon - Jelajahi London</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body data-bs-spy="scroll"
+      data-bs-target="#navbar"
+      data-bs-offset="100">
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            <span>♦</span> VisitLondon
+            <small>Explore • Discover • Experience</small>
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#destination">Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonial">Testimoni</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+
+            </ul>
+
+<!-- NOTIFICATION -->
+<div class="notification-wrapper">
+    <button type="button" class="notification-btn" id="notificationBtn"
+            aria-label="Notifikasi">
+        <i class="bi bi-bell"></i>
+        <span class="notification-badge" id="notificationBadge">0</span>
+    </button>
+
+    <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+            <strong>Aktivitas</strong>
+            <button type="button" class="btn btn-sm btn-link text-danger p-0" id="clearNotifications">Hapus</button>
+        </div>
+        <div class="notification-tabs">
+            <button type="button" class="notification-tab active" data-notif-tab="notifications">Notifikasi</button>
+            <button type="button" class="notification-tab" data-notif-tab="history">History Pemesanan</button>
+        </div>
+        <div class="notification-page active" id="notificationsPage">
+            <div class="notification-list" id="notificationList">
+                <div class="empty-notification">Belum ada notifikasi.</div>
+            </div>
+        </div>
+        <div class="notification-page" id="historyPage">
+            <div id="historyList"></div>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="hero-content fade-up">
+
+            <div class="hero-label">
+                WELCOME TO LONDON
+            </div>
+
+            <h1>
+                Jelajahi <span id="heroTypewriter"></span><span class="typewriter-cursor">|</span>
+            </h1>
+
+            <p>
+                Dari landmark bersejarah hingga pengalaman modern,
+                London selalu punya cerita untuk setiap perjalanan Anda.
+            </p>
+
+            <a href="#destination"
+               class="btn btn-london mt-3">
+
+                Jelajahi Sekarang
+                <i class="bi bi-arrow-right ms-2"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5 fade-up">
+
+                <div class="section-label">
+                    ABOUT US
+                </div>
+
+                <h2 class="section-title">
+                    Kenapa Harus
+                    Ke London?
+                </h2>
+
+                <p class="mt-3">
+                    London adalah perpaduan sempurna antara sejarah,
+                    budaya, dan kehidupan modern. Kota ini menawarkan
+                    berbagai destinasi wisata ikonik, kuliner lezat,
+                    serta pengalaman yang tak terlupakan.
+                </p>
+
+                <a href="#destination"
+                   class="btn btn-london mt-3">
+
+                    Pelajari Lebih Lanjut
+                    <i class="bi bi-arrow-right ms-2"></i>
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-4 fade-up">
+
+                <img
+                    src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=900&q=80"
+                    class="about-img"
+                    alt="London">
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="about-box fade-up">
+
+                    <div class="d-flex mb-4">
+
+                        <div class="about-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <div>
+                            <strong>Destinasi Ikonik</strong>
+                            <small class="d-block">
+                                Big Ben, Tower Bridge,
+                                Buckingham Palace.
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex mb-4">
+
+                        <div class="about-icon">
+                            <i class="bi bi-camera"></i>
+                        </div>
+
+                        <div>
+                            <strong>Budaya & Sejarah</strong>
+                            <small class="d-block">
+                                Museum, galeri, dan bangunan
+                                bersejarah.
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex">
+
+                        <div class="about-icon">
+                            <i class="bi bi-airplane"></i>
+                        </div>
+
+                        <div>
+                            <strong>Mudah Diakses</strong>
+                            <small class="d-block">
+                                Transportasi publik yang
+                                lengkap dan nyaman.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COUNT-UP STATISTICS -->
+    <div class="container stats-section fade-up">
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number count-up" data-target="1000" data-suffix="+">0</div>
+                    <span class="stat-label">Wisatawan</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number count-up" data-target="50" data-suffix="+">0</div>
+                    <span class="stat-label">Destinasi</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number count-up" data-target="20" data-suffix="+">0</div>
+                    <span class="stat-label">Event & Festival</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-box">
+                    <div class="stat-number count-up" data-target="98" data-suffix="%">0</div>
+                    <span class="stat-label">Kepuasan Pengunjung</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DESTINATION
+========================= -->
+
+<section id="destination" class="destination">
+
+    <div class="container">
+
+        <div class="section-label">MENU</div>
+
+        <h2 class="section-title mb-5">
+            Destinasi Populer di London
+        </h2>
+
+        <div class="destination-grid">
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Big Ben">
+                    <div class="card-body">
+                        <h5>Big Ben & Houses of Parliament</h5>
+                        <p class="small text-muted">Ikon klasik London yang wajib dikunjungi.</p>
+                        <a href="#" class="detail-link" data-bs-toggle="modal" data-bs-target="#modalBigBen">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Tower Bridge">
+                    <div class="card-body">
+                        <h5>Tower Bridge</h5>
+                        <p class="small text-muted">Jembatan bersejarah dengan pemandangan menakjubkan.</p>
+                        <a href="#" class="detail-link" data-bs-toggle="modal" data-bs-target="#modalTower">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Buckingham Palace">
+                    <div class="card-body">
+                        <h5>Buckingham Palace</h5>
+                        <p class="small text-muted">Istana resmi keluarga kerajaan Inggris.</p>
+                        <a href="#" class="detail-link" data-bs-toggle="modal" data-bs-target="#modalBuckingham">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="alam">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="London Eye">
+                    <div class="card-body">
+                        <h5>London Eye</h5>
+                        <p class="small text-muted">Nikmati panorama kota London dari ketinggian.</p>
+                        <a href="#" class="detail-link" data-bs-toggle="modal" data-bs-target="#modalEye">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Westminster Abbey">
+                    <div class="card-body">
+                        <h5>Westminster Abbey</h5>
+                        <p class="small text-muted">Bangunan bersejarah dengan arsitektur Gothic yang indah.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1598977123110-7f6b7d7c3f0b?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Tower of London">
+                    <div class="card-body">
+                        <h5>Tower of London</h5>
+                        <p class="small text-muted">Benteng bersejarah yang menjadi bagian penting dari sejarah Inggris.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="alam">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Hyde Park">
+                    <div class="card-body">
+                        <h5>Hyde Park</h5>
+                        <p class="small text-muted">Taman kota luas untuk berjalan santai dan menikmati suasana hijau.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="kuliner">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Camden Market">
+                    <div class="card-body">
+                        <h5>Camden Market</h5>
+                        <p class="small text-muted">Tempat populer untuk mencicipi kuliner dan menjelajahi toko unik.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="kuliner">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Borough Market">
+                    <div class="card-body">
+                        <h5>Borough Market</h5>
+                        <p class="small text-muted">Pasar kuliner terkenal dengan beragam makanan dan minuman.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="St. Paul's Cathedral">
+                    <div class="card-body">
+                        <h5>St. Paul's Cathedral</h5>
+                        <p class="small text-muted">Katedral ikonik London dengan kubah yang menjadi ciri khas kota.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="alam">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1523528283115-9bf9b1699245?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Regent's Park">
+                    <div class="card-body">
+                        <h5>Regent's Park</h5>
+                        <p class="small text-muted">Ruang hijau yang indah dengan taman bunga dan suasana tenang.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-item fade-up" data-category="sejarah">
+                <div class="card destination-card">
+                    <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="St. James's Park">
+                    <div class="card-body">
+                        <h5>St. James's Park</h5>
+                        <p class="small text-muted">Taman kerajaan yang berada dekat Buckingham Palace.</p>
+                        <a href="#gallery" class="detail-link">Lihat Foto <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MODALS
+========================= -->
+
+<div class="modal fade" id="modalBigBen">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">Big Ben</h5>
+
+                <button class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Big Ben merupakan salah satu landmark
+                paling terkenal di London. Nikmati suasana
+                Westminster dan pemandangan Sungai Thames.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="modalTower">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">Tower Bridge</h5>
+
+                <button class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Tower Bridge merupakan jembatan ikonik
+                yang menjadi salah satu simbol kota London.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="modalBuckingham">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">Buckingham Palace</h5>
+
+                <button class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Buckingham Palace adalah kediaman resmi
+                keluarga kerajaan Inggris di London.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="modalEye">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">London Eye</h5>
+
+                <button class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                London Eye memberikan pemandangan panorama
+                kota London dari atas Sungai Thames.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     EVENT
+========================= -->
+
+<section class="event">
+
+    <div class="container">
+
+        <div class="event-box">
+
+            <div class="event-content fade-up">
+
+                <div class="section-label text-white">
+                    EVENT & FESTIVAL
+                </div>
+
+                <h2 class="section-title">
+                    Rasakan London
+                    dalam Suasana Berbeda
+                </h2>
+
+                <p>
+                    Temukan berbagai festival, pertunjukan,
+                    event budaya, dan aktivitas menarik
+                    yang berlangsung sepanjang tahun.
+                </p>
+
+                <button class="btn btn-london">
+                    Lihat Event
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="gallery" class="gallery">
+
+    <div class="container">
+
+        <div class="section-label">GALERI</div>
+
+        <h2 class="section-title mb-5">
+            Momen Indah di London
+        </h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="London">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="London Eye">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Big Ben">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Tower Bridge">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Westminster Abbey">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1598977123110-7f6b7d7c3f0b?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Tower of London">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Hyde Park">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Camden Market">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Borough Market">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="St. Paul's Cathedral">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1523528283115-9bf9b1699245?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Regent's Park">
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="St. James's Park">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TESTIMONI
+========================= -->
+
+<section id="testimonial" class="testimonial">
+
+    <div class="container">
+
+        <div class="section-label text-white">
+            TESTIMONI
+        </div>
+
+        <h2 class="section-title mb-5">
+            Apa Kata Mereka?
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4 fade-up">
+
+                <div class="testimonial-card">
+
+                    <div class="d-flex align-items-center mb-3">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=12"
+                            class="avatar me-3"
+                            alt="User">
+
+                        <div>
+
+                            <strong>Andi Pratama</strong>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="small">
+                        "London benar-benar luar biasa!
+                        Tempatnya bersih, aman, dan
+                        pemandangannya sangat indah."
+                    </p>
+
+                    <small>
+                        <i class="bi bi-geo-alt"></i>
+                        Jakarta, Indonesia
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 fade-up">
+
+                <div class="testimonial-card">
+
+                    <div class="d-flex align-items-center mb-3">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=32"
+                            class="avatar me-3"
+                            alt="User">
+
+                        <div>
+
+                            <strong>Siti Rahma</strong>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="small">
+                        "Pengalaman yang tak terlupakan!
+                        Dari museum hingga kulinernya,
+                        semuanya sangat memuaskan."
+                    </p>
+
+                    <small>
+                        <i class="bi bi-geo-alt"></i>
+                        Bandung, Indonesia
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 fade-up">
+
+                <div class="testimonial-card">
+
+                    <div class="d-flex align-items-center mb-3">
+
+                        <img
+                            src="https://i.pravatar.cc/100?img=15"
+                            class="avatar me-3"
+                            alt="User">
+
+                        <div>
+
+                            <strong>Budi Santoso</strong>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="small">
+                        "Transportasinya mudah dan fasilitasnya
+                        lengkap. Sangat direkomendasikan untuk
+                        liburan keluarga."
+                    </p>
+
+                    <small>
+                        <i class="bi bi-geo-alt"></i>
+                        Surabaya, Indonesia
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section id="faq" class="faq">
+
+    <div class="container">
+
+        <div class="col-lg-8 mx-auto">
+
+            <div class="text-center">
+
+                <div class="section-label">
+                    FAQ
+                </div>
+
+                <h2 class="section-title mb-5">
+                    Pertanyaan yang Sering Diajukan
+                </h2>
+
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+
+                <div class="accordion-item mb-3">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+
+                            Apa saja destinasi wisata
+                            yang wajib dikunjungi di London?
+
+                        </button>
+
+                    </h2>
+
+                    <div id="faq1"
+                         class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+
+                        <div class="accordion-body">
+
+                            Beberapa destinasi populer adalah
+                            Big Ben, Tower Bridge, Buckingham
+                            Palace, dan London Eye.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="accordion-item mb-3">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+
+                            Kapan waktu terbaik
+                            untuk berkunjung ke London?
+
+                        </button>
+
+                    </h2>
+
+                    <div id="faq2"
+                         class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+
+                        <div class="accordion-body">
+
+                            Waktu terbaik tergantung aktivitas
+                            yang ingin dilakukan. Musim semi dan
+                            musim panas biasanya menjadi pilihan
+                            populer bagi wisatawan.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button
+                            class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+
+                            Bagaimana cara menuju London
+                            dari Indonesia?
+
+                        </button>
+
+                    </h2>
+
+                    <div id="faq3"
+                         class="accordion-collapse collapse"
+                         data-bs-parent="#faqAccordion">
+
+                        <div class="accordion-body">
+
+                            Perjalanan dapat dilakukan menggunakan
+                            penerbangan internasional menuju
+                            bandara utama di sekitar London.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT + MAP
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="row g-4 align-items-center">
+
+            <div class="col-lg-7">
+
+                <div class="section-label">
+                    KONTAK KAMI
+                </div>
+
+                <h2 class="section-title mb-4">
+                    Temukan London
+                    di Peta
+                </h2>
+
+                <div class="map-box">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=London,United%20Kingdom&output=embed"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="contact-form">
+
+                    <h3 class="mb-4">
+                        Hubungi Kami
+                    </h3>
+
+                    <form>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Nama Lengkap
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Masukkan nama">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Masukkan email">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Pesan
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                placeholder="Tulis pesan Anda"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-london w-100">
+
+                            <i class="bi bi-send me-2"></i>
+                            Pesan
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-5">
+
+                <div class="footer-brand">
+                    <span>♦</span> VisitLondon
+                </div>
+
+                <p class="small mt-3">
+                    Explore • Discover • Experience
+                </p>
+
+                <p class="small text-white-50">
+                    Website informasi pariwisata London
+                    untuk membantu wisatawan menemukan
+                    destinasi terbaik.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-2">
+
+                <h6>Navigation</h6>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#destination">Menu</a>
+                    <a href="#gallery">Gallery</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-2">
+
+                <h6>Information</h6>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a href="#faq">FAQ</a>
+                    <a href="#testimonial">Testimoni</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <h6>Follow Us</h6>
+
+                <div class="d-flex gap-3 mt-3">
+
+                    <a href="#">
+                        <i class="bi bi-instagram fs-4"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-facebook fs-4"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x fs-4"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-line text-center">
+
+            <small class="text-white-50">
+
+                © 2026 VisitLondon.
+                All Rights Reserved.
+
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BOOKING / PESAN NOTIFICATION -->
+<div id="bookingNotification" class="booking-notification" role="status" aria-live="polite">
+    <div class="notification-icon">
+        <i class="bi bi-check-lg"></i>
+    </div>
+    <div>
+        <div class="notification-title">Pesan berhasil dikirim!</div>
+        <p class="notification-text">Terima kasih. Pesanan kamu sedang diproses.</p>
+    </div>
+    <button type="button" class="notification-close" aria-label="Tutup notifikasi">
+        <i class="bi bi-x-lg"></i>
+    </button>
+</div>
+
+<!-- =========================
+     FLOATING BUTTON
+========================= -->
+
+<div class="social-float">
+
+    <a href="#"
+       class="instagram"
+       title="Instagram">
+
+        <i class="bi bi-instagram"></i>
+
+    </a>
+
+    <button type="button"
+       class="ticket-widget"
+       id="ticketButton"
+       title="Pesan tiket wisata London"
+       aria-label="Pesan tiket wisata London">
+
+        <i class="bi bi-ticket-perforated"></i>
+
+    </button>
+
+    <button type="button"
+       class="whatsapp"
+       id="openChatButton"
+       title="Chat di website"
+       aria-label="Buka chat bantuan">
+
+        <i class="bi bi-whatsapp"></i>
+
+    </button>
+
+    <a href="#home"
+       class="back-top"
+       title="Back to top">
+
+        <i class="bi bi-arrow-up"></i>
+
+    </a>
+
+</div>
+
+
+
+<!-- =========================
+     CHAT BANTUAN DI DALAM WEBSITE
+========================= -->
+<div class="chat-window" id="chatWindow" aria-hidden="true">
+    <div class="chat-header">
+        <div class="chat-person">
+            <div class="chat-avatar"><i class="bi bi-headset"></i></div>
+            <div>
+                <strong>London Tourism Help</strong>
+                <div class="chat-status"><i class="bi bi-circle-fill text-success"></i> Online • Balas otomatis</div>
+            </div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Tutup chat"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody">
+        <div class="chat-message bot"><div class="chat-bubble">Halo! 👋 Selamat datang di London Tourism. Ada yang bisa saya bantu tentang destinasi atau tiket?</div></div>
+        <div class="chat-quick">
+            <button type="button" data-chat="Destinasi populer di London">Destinasi populer</button>
+            <button type="button" data-chat="Bagaimana cara pesan tiket?">Cara pesan tiket</button>
+            <button type="button" data-chat="Jam operasional">Jam operasional</button>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <div class="chat-typing" id="chatTyping">Sedang mengetik...</div>
+        <form class="chat-form" id="chatForm">
+            <input class="chat-input" id="chatInput" placeholder="Tulis pesan..." autocomplete="off">
+            <button class="chat-send" type="submit" aria-label="Kirim"><i class="bi bi-send-fill"></i></button>
+        </form>
+    </div>
+</div>
+
+<!-- =========================
+     MODAL DAFTAR WISATA / PESAN TIKET
+========================= -->
+<div class="modal fade ticket-modal" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title mb-1" id="ticketModalLabel">Pesan Tiket Wisata London</h5>
+          <small>Pilih destinasi yang ingin kamu pesan</small>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="ticket-place-card">
+              <div class="ticket-place-icon"><i class="bi bi-clock-history"></i></div>
+              <h6>Big Ben & Houses of Parliament</h6>
+              <p>Ikon London di kawasan Westminster.</p>
+              <button class="btn-book-place" data-place="Big Ben & Houses of Parliament">Pesan Tiket</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ticket-place-card">
+              <div class="ticket-place-icon"><i class="bi bi-building"></i></div>
+              <h6>Tower Bridge</h6>
+              <p>Jembatan ikonik dengan pemandangan Sungai Thames.</p>
+              <button class="btn-book-place" data-place="Tower Bridge">Pesan Tiket</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ticket-place-card">
+              <div class="ticket-place-icon"><i class="bi bi-house-heart"></i></div>
+              <h6>Buckingham Palace</h6>
+              <p>Kediaman kerajaan yang terkenal di London.</p>
+              <button class="btn-book-place" data-place="Buckingham Palace">Pesan Tiket</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ticket-place-card">
+              <div class="ticket-place-icon"><i class="bi bi-circle"></i></div>
+              <h6>London Eye</h6>
+              <p>Menikmati panorama London dari ketinggian.</p>
+              <button class="btn-book-place" data-place="London Eye">Pesan Tiket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
